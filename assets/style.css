@@ -1,0 +1,664 @@
+
+/* =====================================
+   SCHOOLADMIN - CSS UTAMA
+   ===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6fc;
+    color: #172b4d;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =====================================
+   LAYOUT DASHBOARD
+   ===================================== */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    background: #14213d;
+    color: #dbeafe;
+    min-height: 100vh;
+    padding: 25px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =====================================
+   LOGO SIDEBAR
+   ===================================== */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 45px;
+}
+
+.brand-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 12px;
+    background: #3478f6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.brand h2 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.brand h2 span {
+    color: #60a5fa;
+}
+
+.brand small {
+    color: #a9bddc;
+    font-size: 11px;
+}
+
+/* =====================================
+   MENU SIDEBAR
+   ===================================== */
+
+.menu-label {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #8da5ca;
+    margin-bottom: 15px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 13px 15px;
+    border-radius: 10px;
+    color: #dbeafe !important;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none !important;
+    transition: background 0.2s ease;
+}
+
+.sidebar nav a:visited {
+    color: #dbeafe !important;
+}
+
+.sidebar nav a:hover {
+    background: #24395e;
+    color: white !important;
+}
+
+.sidebar nav a.active {
+    background: #3478f6;
+    color: white !important;
+    font-weight: 600;
+}
+
+/* =====================================
+   SIDEBAR BAWAH
+   ===================================== */
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #34445f;
+}
+
+.admin-mini {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+    color: white;
+    font-weight: 600;
+}
+
+.admin-mini span {
+    font-size: 13px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #3478f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.logout {
+    display: block;
+    color: #ff8585 !important;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.logout:hover {
+    color: white !important;
+}
+
+/* =====================================
+   KONTEN UTAMA
+   ===================================== */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 30px;
+    overflow-x: hidden;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.topbar h1,
+.topbar h2 {
+    font-size: 27px;
+    color: #172b4d;
+    margin-bottom: 8px;
+}
+
+.topbar p {
+    color: #8493aa;
+    font-size: 13px;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-profile strong {
+    display: block;
+    color: #172b4d;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.admin-profile small {
+    color: #8493aa;
+    font-size: 11px;
+}
+
+/* =====================================
+   BANNER WELCOME
+   ===================================== */
+
+.welcome {
+    background: linear-gradient(110deg, #2864ef, #4c8df7);
+    color: white;
+    border-radius: 18px;
+    padding: 35px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 140px;
+    box-shadow: 0 10px 25px rgba(52, 120, 246, 0.12);
+}
+
+.welcome-tag {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #dbeafe;
+    margin-bottom: 18px;
+}
+
+.welcome h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.welcome p {
+    font-size: 13px;
+    color: #eaf2ff;
+}
+
+.welcome-icon {
+    font-size: 55px;
+}
+
+/* =====================================
+   CARD KONTEN
+   ===================================== */
+
+.content-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(20, 40, 80, 0.04);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.section-header h2,
+.section-header h3 {
+    font-size: 19px;
+    color: #172b4d;
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    font-size: 13px;
+    color: #8493aa;
+}
+
+/* =====================================
+   TOMBOL
+   ===================================== */
+
+.btn-primary {
+    display: inline-block;
+    background: #3478f6;
+    color: white !important;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.btn-primary:hover {
+    background: #2864df;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* =====================================
+   FORM DAN PENCARIAN
+   ===================================== */
+
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 13px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3478f6;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.search-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 15px;
+    border: 1px solid #dce3ee;
+    border-radius: 8px;
+}
+
+.search-form button {
+    padding: 12px 20px;
+    background: #3478f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* =====================================
+   TABEL
+   ===================================== */
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+thead th {
+    background: #f7f9fc;
+    color: #64748b;
+    padding: 15px 13px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+tbody td {
+    padding: 15px 13px;
+    border-bottom: 1px solid #edf0f5;
+    color: #475569;
+    font-size: 13px;
+}
+
+tbody tr:hover {
+    background: #f9fbff;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* =====================================
+   AKSI EDIT DAN HAPUS
+   ===================================== */
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.edit-btn {
+    background: #eaf1ff;
+    color: #3478f6 !important;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background: #fff0f0;
+    color: #dc4444 !important;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.class-badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #eef2ff;
+    color: #4f46e5;
+    font-size: 12px;
+}
+
+/* =====================================
+   ABSENSI
+   ===================================== */
+
+.attendance-input {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #dce3ee;
+    border-radius: 6px;
+    background: white;
+}
+
+.attendance-note {
+    min-width: 180px;
+}
+
+.attendance-date {
+    padding: 10px;
+    border: 1px solid #dce3ee;
+    border-radius: 6px;
+    margin: 10px 0 20px;
+}
+
+.save-button {
+    margin-top: 20px;
+    padding: 12px 22px;
+    background: #3478f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* =====================================
+   PESAN DAN FOOTER
+   ===================================== */
+
+.success-message {
+    background: #e7f8ed;
+    color: #218447;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.empty-message,
+.empty {
+    text-align: center;
+    padding: 30px;
+    color: #8b96a8;
+}
+
+.table-footer {
+    padding-top: 18px;
+    color: #8493aa;
+    font-size: 13px;
+}
+
+footer {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 11px;
+    padding: 15px 0;
+}
+
+/* =====================================
+   RESPONSIVE
+   ===================================== */
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 220px;
+        min-width: 220px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .welcome {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 180px;
+        min-width: 180px;
+        padding: 18px 10px;
+    }
+
+    .brand h2 {
+        font-size: 16px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .topbar h1,
+    .topbar h2 {
+        font-size: 22px;
+    }
+
+    .welcome {
+        padding: 22px;
+    }
+
+    .welcome h2 {
+        font-size: 20px;
+    }
+
+    .welcome-icon {
+        font-size: 35px;
+    }
+
+    .content-card {
+        padding: 17px;
+    }
+
+    .section-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* ===== PERAPIAN SIDEBAR SCHOOLADMIN ===== */
+
+.sidebar {
+    padding: 25px 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Logo dan nama SchoolAdmin */
+.sidebar .brand {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-bottom: 40px !important;
+    padding: 0 !important;
+}
+
+/* Kotak logo S */
+.sidebar .brand-icon {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    border-radius: 12px !important;
+    background: #3478f6 !important;
+    color: white !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+}
+
+/* Nama SchoolAdmin */
+.sidebar .brand h2 {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    margin: 0 0 5px 0 !important;
+    color: white !important;
+    white-space: nowrap !important;
+}
+
+/* Management System */
+.sidebar .brand small {
+    display: block !important;
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+    color: #a9bddc !important;
+}
+
+/* Jarak tulisan MENU UTAMA */
+.sidebar .menu-label {
+    display: block !important;
+    margin: 0 0 16px 0 !important;
+    padding: 0 !important;
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+    letter-spacing: 1.5px !important;
+    color: #8da5ca !important;
+}
+
+/* Jarak antar menu */
+.sidebar nav {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+
+.sidebar nav a {
+    min-height: 48px !important;
+    padding: 14px 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    border-radius: 10px !important;
+    line-height: 1.5 !important;
+    font-size: 13px !important;
+}
+
+/* Bagian profil dan logout */
+.sidebar .sidebar-bottom {
+    margin-top: auto !important;
+    padding-top: 20px !important;
+}
+
+/* Hindari tulisan menempel */
+.sidebar h2,
+.sidebar p,
+.sidebar small {
+    line-height: 1.5;
+}
